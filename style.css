@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    color: white;
+}
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('https://wallpaperforu.com/wp-content/uploads/2021/07/Aesthetic-Black-Wallpaper32-1536x864.jpg'), no-repeat;
+}
+#wrapper {
+    display: inline-table;
+    width: 400px;
+    height: 200px;
+    border: solid black 1px;
+    border-radius: 10px;
+    box-shadow: 2px 3px 10px black;
+    padding: 22px;
+    background-color: #0f0f0f;
+    
+}
+#wrapper h1, .add-task {
+    margin: 20px;
+    text-align: center;
+}
+.add-task {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    
+}
+.add-task input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    overflow: 0; 
+    border: none;
+    background-color: #232D3F;
+    color: white;
+}
+.add-task button {
+    padding: 10px;
+    width: 60px;
+    border-radius: 10px;
+    position: absolute;
+    border: none;
+    background: #008170;
+    cursor: pointer;
+}
+
+
+input:focus {
+    outline: 0;
+}
+.taskBox {
+    display: flex;
+    justify-content: space-between;
+    
+    align-items: center;
+    width: 100%;
+    background-color: #183D3D;
+    padding: 18px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+#del-btn {
+    color: #0f0f0f;
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+    background: #008170;
+}
