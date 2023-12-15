@@ -1,3 +1,4 @@
+
 //elements declareation
 const addTaskInput = document.querySelector('#add-task-input')
 const addBtn = document.querySelector('#add-btn')
@@ -7,14 +8,9 @@ const wrapper = document.querySelector('#wrapper')
 
 function addRemoveTask(){
     const delBtn = document.createElement('button')
-    const checkbox = document.createElement("input")
     const taskBox = document.createElement('div')
-    
+    const checkbox = document.createElement('span')
     if (addTaskInput.value !== ''){
-        checkbox.addEventListener("change", () => {
-            taskBox.toggle("checked")
-        })
-        checkbox.type = "checkbox";
         delBtn.id = 'del-btn'
         taskBox.className = 'taskBox'
         delBtn.innerHTML = 'Delete'
@@ -23,13 +19,21 @@ function addRemoveTask(){
         wrapper.appendChild(taskBox)
         taskBox.appendChild(delBtn)
         addTaskInput.value = ''
+        
+        
         }
         
     delBtn.addEventListener('click', ()=>{
         taskBox.remove()
     })
+
+    taskBox.addEventListener("click", () => {
+        taskBox.classList.toggle("green-text");
+        taskBox.style.backgroundColor = '#232D3F'
+      });
     
 }
+// checkbox btn
 
 // delete button function
 addBtn.addEventListener('click', () => {
